@@ -59,13 +59,13 @@ Hub VNet Peerings (screenshots/05-hub-vnet-peerings-terraform.png)
 
 Deployment
 
-`
+```
 git clone https://github.com/maxmagnac/azure-hub-spoke-terraform.git
 cd azure-hub-spoke-terraform
 terraform init
 terraform plan
 terraform apply
-``
+```
 
 Related Projects
 
