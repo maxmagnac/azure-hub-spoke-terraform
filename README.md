@@ -6,15 +6,14 @@ A hands-on Azure networking project demonstrating a hub-and-spoke virtual networ
 
 Network Topology
 
-```mermaid
- graph TD
+``mermaid
+graph TD
  HUB["hub-vnet"]
  S1["spoke1-vnet"]
  S2["spoke2-vnet"]
 
  HUB -- "spoke1-to-hub | Connected | Fully Synchronized" --- S1
  HUB -- "spoke2-to-hub | Connected | Fully Synchronized" --- S2
-```
 `
 
 Architecture Overview
@@ -41,25 +40,44 @@ Hub to Spoke 1
 
 Hub to Spoke 2
 - Allow hub-vnet to access spoke2-vnet ✅
-- Forward traffic from spoke2-vnet to hub-vnet ⬜
+- Forward traffic from spoke2-vnet to hub-vnet` ⬜
 - Gateway or route server forwarding ⬜
 - Remote gateway or route server ⬜
 
 Screenshot Walkthrough
 
-| # | File | Description |
-|---|---|---|
-| 01 | 01-hub-vnet.png | Hub VNet configuration |
-| 02 | 02-spoke1-vnet.png | Spoke 1 VNet configuration |
-| 03 | 03-spoke2-vnet.png | Spoke 2 VNet configuration |
-| 04 | 04-hub-vnet-peerings.png | Hub VNet peerings overview |
-| 04a | 04a-hub-to-spoke1-peering-remote.png | Hub to Spoke 1 remote peering settings |
-| 04b | 04b-hub-to-spoke1-peering-local.png | Hub to Spoke 1 local peering settings |
-| 05 | 05-spoke1-vnet-peerings.png | Spoke 1 peerings - Connected to hub-vnet |
-| 06 | 06-hub-to-spoke2-peering-remote.png | Hub to Spoke 2 remote peering settings |
-| 07 | 07-hub-to-spoke2-peering-local.png | Hub to Spoke 2 local peering settings |
-| 08 | 08-hub-vnet-spoke2-peering-connected.png | Hub VNet Spoke 2 peering connected status |
-| 09 | 09-spoke2-vnet-peerings.png` | Spoke 2 peerings - Connected to hub-vnet |
+01 - Hub VNet
+Hub VNet (01-hub-vnet.png)
+
+02 - Spoke 1 VNet
+Spoke 1 VNet (02-spoke1-vnet.png)
+
+03 - Spoke 2 VNet
+Spoke 2 VNet (03-spoke2-vnet.png)
+
+04 - Hub VNet Peerings Overview
+Hub VNet Peerings (04-hub-vnet-peerings.png)
+
+04a - Hub to Spoke 1 Peering (Remote Settings)
+Hub to Spoke 1 Remote (04a-hub-to-spoke1-peering-remote.png)
+
+04b - Hub to Spoke 1 Peering (Local Settings)
+Hub to Spoke 1 Local (04b-hub-to-spoke1-peering-local.png)
+
+05 - Spoke 1 VNet Peerings
+Spoke 1 Peerings (05-spoke1-vnet-peerings.png)
+
+06 - Hub to Spoke 2 Peering (Remote Settings)
+Hub to Spoke 2 Remote (06-hub-to-spoke2-peering-remote.png)
+
+07 - Hub to Spoke 2 Peering (Local Settings)
+Hub to Spoke 2 Local (07-hub-to-spoke2-peering-local.png)
+
+08 - Hub VNet Spoke 2 Peering Connected
+Spoke 2 Peering Connected (08-hub-vnet-spoke2-peering-connected.png)
+
+09 - Spoke 2 VNet Peerings
+Spoke 2 Peerings (09-spoke2-vnet-peerings.png)
 
 Key Concepts
 
@@ -88,6 +106,3 @@ Related Projects
 Author
 
 Maurrin Carter
-GitHub (https://github.com/maxmagnac)
-
-Let me know what GitHub renders! 💪🏾
