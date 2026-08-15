@@ -20,55 +20,6 @@ graph TD
 
  HUB -- "spoke1-to-hub | Connected | Fully Synchronized" --- S1
  HUB -- "spoke2-to-hub | Connected | Fully Synchronized" --- S2
-Architecture Overview
-Component	Type	Role
-hub-vnet	Azure Virtual Network	Central connectivity hub
-spoke1-vnet	Azure Virtual Network	Workload segment 1
-spoke2-vnet	Azure Virtual Network	Workload segment 2
-spoke1-to-hub	VNet Peering	Spoke 1 to Hub peering link
-hub-to-spoke1	VNet Peering	Hub to Spoke 1 peering link
-spoke2-to-hub	VNet Peering	Spoke 2 to Hub peering link
-hub-to-spoke2	VNet Peering	Hub to Spoke 2 peering link
-Peering Configuration
-Azure VNet Peering requires two peering links per connection - one from each side. This project configures all four links with the following settings:
+```
 
-Hub to Spoke 1
-Allow hub-vnet to access spoke1-vnet ✅
-Forward traffic from spoke1-vnet to hub-vnet ⬜
-Gateway or route server forwarding ⬜
-Remote gateway or route server ⬜
-Hub to Spoke 2
-Allow hub-vnet to access spoke2-vnet ✅
-Forward traffic from spoke2-vnet to hub-vnet ⬜
-Gateway or route server forwarding ⬜
-Remote gateway or route server ⬜
-Screenshot Walkthrough
-#	File	Description
-01	01-hub-vnet.png	Hub VNet configuration
-02	02-spoke1-vnet.png	Spoke 1 VNet configuration
-03	03-spoke2-vnet.png	Spoke 2 VNet configuration
-04	04-hub-vnet-peerings.png	Hub VNet peerings overview
-04a	04a-hub-to-spoke1-peering-remote.png	Hub to Spoke 1 remote peering settings
-04b	04b-hub-to-spoke1-peering-local.png	Hub to Spoke 1 local peering settings
-05	05-spoke1-vnet-peerings.png	Spoke 1 peerings - Connected to hub-vnet
-06	06-hub-to-spoke2-peering-remote.png	Hub to Spoke 2 remote peering settings
-07	07-hub-to-spoke2-peering-local.png	Hub to Spoke 2 local peering settings
-08	08-hub-vnet-spoke2-peering-connected.png	Hub VNet Spoke 2 peering connected status
-09	09-spoke2-vnet-peerings.png	Spoke 2 peerings - Connected to hub-vnet
-Key Concepts
-Hub-and-Spoke Topology A hub-and-spoke architecture places a central hub VNet as the shared services and connectivity layer. Each spoke VNet connects to the hub, allowing controlled communication across workload segments without direct spoke-to-spoke peering.
-
-Azure VNet Peering VNet Peering connects two Azure virtual networks, making them function as a single network for connectivity purposes. Peering operates at low latency over the Microsoft backbone network without requiring gateways or encrypted tunnels.
-
-Bidirectional Peering Links Each peered connection requires two peering links - one initiated from each VNet. Both links must reach a Connected and Fully Synchronized state for traffic to flow correctly.
-
-Technologies Used
-Microsoft Azure
-Azure Virtual Networks (VNet)
-Azure VNet Peering
-Azure Portal
-Related Projects
-Project	Description
-azure-hub-spoke-terraform	Terraform automation of this exact architecture
-Author
-Maurrin Carter GitHub
+---
