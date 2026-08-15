@@ -14,7 +14,7 @@ graph TD
 
  Hub <--> Spoke1
  Hub <--> Spoke2
-`
+```
 
 Technologies Used
 
