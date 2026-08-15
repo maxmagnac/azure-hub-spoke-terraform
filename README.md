@@ -14,6 +14,7 @@ graph TD
 
  HUB -- "spoke1-to-hub | Connected | Fully Synchronized" --- S1
  HUB -- "spoke2-to-hub | Connected | Fully Synchronized" --- S2
+```
 `
 
 Architecture Overview
