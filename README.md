@@ -6,14 +6,14 @@ Architecture Overview
 
 The hub-and-spoke topology connects a central hub virtual network to two spoke virtual networks through VNet peering. All traffic routes through the hub, simulating how enterprises isolate workloads while maintaining centralized connectivity.
 
-``mermaid
+```mermaid
 graph TD
- Hub["Hub VNet<br/>10.0.0.0/16"]
- Spoke1["Spoke1 VNet<br/>10.1.0.0/16"]
- Spoke2["Spoke2 VNet<br/>10.2.0.0/16"]
+ HUB["🔷 hub-vnet 10.0.0.0/16"]
+ S1["🔹 spoke1-vnet 10.1.0.0/16"]
+ S2["🔹 spoke2-vnet 10.2.0.0/16"]
 
- Hub <--> Spoke1
- Hub <--> Spoke2
+ HUB -- "spoke1-to-hub | Connected | Fully Synchronized" --- S1
+ HUB -- "spoke2-to-hub | Connected | Fully Synchronized" --- S2
 ```
 
 Technologies Used
