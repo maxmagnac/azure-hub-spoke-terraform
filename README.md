@@ -1,5 +1,3 @@
-The diagram code is clean. The emojis are likely what breaks it on GitHub. Here's the full README without emojis in the Mermaid block - paste this directly into your README.md:
-
 Azure Hub-and-Spoke Network Topology
 
 A hands-on Azure networking project demonstrating a hub-and-spoke virtual network architecture using Azure VNet Peering. This project establishes a central hub VNet connected to two spoke VNets, enabling controlled and scalable network segmentation in the cloud.
