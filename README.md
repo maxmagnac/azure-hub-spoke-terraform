@@ -6,7 +6,7 @@ A hands-on Azure networking project demonstrating a hub-and-spoke virtual networ
 
 Network Topology
 
-``mermaid
+```mermaid
 graph TD
  HUB["hub-vnet"]
  S1["spoke1-vnet"]
